@@ -12,7 +12,8 @@ if [[ ! -z $3 ]]; then
   rsync -navh /var/lib/squeezeboxserver/prefs/ "$srcDir"config/squeezebox/ | grep -v 'uptodate'
   #firefox
   rsync -navh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessionstore.* "$srcDir"config/firefox/ | grep -v 'uptodate'
-  rsync -navh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessionbackups/ "$srcDir"config/firefox/ | grep -v 'uptodate'
+  rsync -navh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessionbackups/ "$srcDir"config/firefox/sessionbackups/ | grep -v 'uptodate'
+  rsync -navh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessions/ "$srcDir"config/firefox/sessions/ | grep -v 'uptodate'
   #gnome file associations
   rsync -navh /etc/gnome/defaults.list "$srcDir"config/file_associations/ | grep -v 'uptodate'
   #files bookmarks
