@@ -13,6 +13,7 @@ if [[ ! -z $3 ]]; then
   #firefox
   sudo rsync -avh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessionstore.* "$srcDir"config/firefox/ | grep -v 'uptodate'
   sudo rsync -avh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessionbackups/ "$srcDir"config/firefox/ | grep -v 'uptodate'
+  sudo rsync -avh /home/alan/.mozilla/firefox/w2xnqmo9.default/sessions/ "$srcDir"config/firefox/sessions/ | grep -v 'uptodate'
   #gnome file associations
   sudo rsync -avh /etc/gnome/defaults.list "$srcDir"config/file_associations/ | grep -v 'uptodate'
   #files bookmarks
