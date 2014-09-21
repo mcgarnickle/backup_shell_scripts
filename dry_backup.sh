@@ -12,8 +12,8 @@ if [[ ! -z $3 ]]; then
   #squeezebox
   rsync -navh /var/lib/squeezeboxserver/prefs/ "$srcDir"config/squeezebox/ --exclude=.git* | grep -v 'uptodate'
   #firefox
-  rsync -navh /home/alan/.mozilla/firefox/wmc89qgm.default/sessionstore.* "$srcDir"config/firefox/sessionstore/ --exclude=.git* | grep -v 'uptodate'
-  rsync -navh /home/alan/.mozilla/firefox/wmc89qgm.default/sessions/ "$srcDir"config/firefox/sessions/ --exclude=.git* | grep -v 'uptodate'
+  rsync -navh ~/.mozilla/firefox/myprofile/sessionstore.* "$srcDir"config/firefox/sessionstore/ --exclude=.git* | grep -v 'uptodate'
+  rsync -navh ~/.mozilla/firefox/myprofile/sessions/ "$srcDir"config/firefox/sessions/ --exclude=.git* | grep -v 'uptodate'
   #gnome file associations
   rsync -navh /etc/gnome/defaults.list "$srcDir"config/file_associations/ --exclude=.git* | grep -v 'uptodate'
   #files bookmarks
