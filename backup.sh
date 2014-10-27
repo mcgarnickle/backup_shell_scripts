@@ -1,12 +1,10 @@
-#################
-##LIVE BACKUP!!##
-#################
-
 srcDir=$1
 destDir=$2
+run=$3
+configs=$4
 
 #copy config files to source first
-if [[ ! -z $3 ]]; then
+if [[ $configs == "config" ]]; then
   #sublime text
   sudo rsync -avh ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings "$srcDir"config/sublime-text/ --exclude=.git* | grep -v 'uptodate'
   #squeezebox
